@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #b8860b, #daa520);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glow {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: glowAnimation 5s infinite alternate;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+        }
+
+        .glow:nth-child(1) {
+            animation: glowAnimation1 5s infinite alternate;        }
+
+        .glow:nth-child(2) {
+            animation: glowAnimation2 5s infinite alternate;        }
+
+        .glow:nth-child(3) {
+            animation: glowAnimation3 5s infinite alternate;        }
+
+        .glow:nth-child(4) {
+            animation: glowAnimation4 5s infinite alternate;        }
+
+        @keyframes glowAnimation1 {
+            0% {
+                top: 20%;
+                left: 20%;
+                opacity: 0.6;
+            }
+            25% {
+                top: 10%;
+                left: 70%;
+                opacity: 0.5;
+            }
+            50% {
+                top: 80%;
+                left: 30%;
+                opacity: 0.4;
+            }
+            75% {
+                top: 60%;
+                left: 90%;
+                opacity: 0.5;
+            }
+            100% {
+                top: 40%;
+                left: 50%;
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes glowAnimation2 {
+            0% {
+                top: 10%;
+                left: 80%;
+                opacity: 0.6;
+            }
+            25% {
+                top: 20%;
+                left: 50%;
+                opacity: 0.5;
+            }
+            50% {
+                top: 60%;
+                left: 10%;
+                opacity: 0.4;
+            }
+            75% {
+                top: 70%;
+                left: 60%;
+                opacity: 0.5;
+            }
+            100% {
+                top: 40%;
+                left: 20%;
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes glowAnimation3 {
+            0% {
+                top: 70%;
+                left: 30%;
+                opacity: 0.6;
+            }
+            25% {
+                top: 80%;
+                left: 80%;
+                opacity: 0.5;
+            }
+            50% {
+                top: 40%;
+                left: 60%;
+                opacity: 0.4;
+            }
+            75% {
+                top: 30%;
+                left: 40%;
+                opacity: 0.5;
+            }
+            100% {
+                top: 50%;
+                left: 20%;
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes glowAnimation4 {
+            0% {
+                top: 50%;
+                left: 10%;
+                opacity: 0.6;
+            }
+            25% {
+                top: 10%;
+                left: 30%;
+                opacity: 0.5;
+            }
+            50% {
+                top: 80%;
+                left: 50%;
+                opacity: 0.4;
+            }
+            75% {
+                top: 60%;
+                left: 80%;
+                opacity: 0.5;
+            }
+            100% {
+                top: 30%;
+                left: 60%;
+                opacity: 0.6;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 100px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            text-align: center;
+            transform: translateY(-30px);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 140px;
+            object-fit: cover;
+            object-position: center center;
+            transform: scale(1.5);
+            border: 6px solid black;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 10px auto;
+            padding: 15px 25px;
+            background-color: #5c3c10;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            box-shadow: 0 0 15px rgba(92, 60, 16, 0.9);
+        }
+
+        .btn-song {
+            background-color: #1e3a8a;
+            box-shadow: 0 0 15px rgba(30, 58, 138, 0.9);
+        }
+
+        .active {
+            transform: scale(1.2);
+            box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.9);
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 22px;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+
+    <div class="container">
+        <img src="https://t.me/Y_C_BOT/12" class="profile-img" id="profileImg">
+        <h1>Skwrh</h1>
+        <p>رجل بسيط يحب الجميع</p>
+        <p class="message-text">لإرسال رسالة لي انقر هنا</p>
+        <a href="https://t.me/iSkwrh" class="btn" id="telegramBtn" target="_blank">Telegram</a>
+        <button class="btn btn-song" id="songBtn">My Song</button>
+        <audio id="song">
+            <source src="https://t.me/Y_C_BOT/14" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function addGlowEffect(element) {
+            element.classList.add("active");
+            setTimeout(() => {
+                element.classList.remove("active");
+            }, 400);
+        }
+
+        document.getElementById("profileImg").addEventListener("mousedown", function() {
+            addGlowEffect(this);
+        });
+
+        document.getElementById("telegramBtn").addEventListener("mousedown", function() {
+            addGlowEffect(this);
+        });
+
+        const song = document.getElementById("song");
+        const songBtn = document.getElementById("songBtn");
+
+        songBtn.addEventListener("click", function() {
+            if (song.paused) {
+                song.play();
+                songBtn.textContent = "Stop Song";
+            } else {
+                song.pause();
+                song.currentTime = 0;
+                songBtn.textContent = "My Song";
+            }
+            addGlowEffect(songBtn);
+        });
+    </script>
+</body>
+</html>
